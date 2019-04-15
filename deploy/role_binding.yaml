@@ -1,0 +1,11 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: apicurito-operator
+subjects:
+- kind: ServiceAccount
+  name: apicurito-operator
+roleRef:
+  kind: Role
+  name: apicurito-operator
+  apiGroup: rbac.authorization.k8s.io
